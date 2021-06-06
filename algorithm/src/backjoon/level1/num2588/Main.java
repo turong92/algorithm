@@ -7,7 +7,6 @@ public class Main {
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		
-		//StringTokenizer st2 = new StringTokenizer(br.readLine(), "");
 		String[] strArr1 = sc.next().split("");
 		String[] strArr2 = sc.next().split("");
 		int[] numArr1 = new int[strArr1.length];
