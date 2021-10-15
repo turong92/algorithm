@@ -1,4 +1,4 @@
-package baekjoon.level24.num1697;
+package baekjoon.level24_DFSBFS.num1697;
 
 import java.io.*;
 import java.util.*;
