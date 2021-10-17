@@ -8,12 +8,10 @@ public class Main {
 	static class point{
 		int y;
 		int x;
-		int cnt;
 		
-		point(int y, int x, int cnt){
+		point(int y, int x){
 			this.y = y;
 			this.x = x;
-			this.cnt = cnt;
 		}
 	}
 	
@@ -48,7 +46,8 @@ public class Main {
 	public static void bfs(int[][] town, int y, int x, boolean[][] isVisited, ArrayList<Integer> list) {
 		Queue<point> q = new LinkedList<>();
 		int len = town.length;
-		q.add(new point(y, x, 1));
+		int cnt = 1;
+		q.add(new point(y, x));
 		isVisited[y][x] = true;
 		
 		point cur;
@@ -59,17 +58,17 @@ public class Main {
 				int nextY = cur.y + dy[i];
 				int nextX = cur.x + dx[i];
 				
-				if(0 <= nextY && nextY <= len && 0 <= nextX && nextX <= len) {
+				if(0 <= nextY && nextY < len && 0 <= nextX && nextX < len) {
 					if(!isVisited[nextY][nextX] && town[nextY][nextX] != 0) {
-						q.add(new point(nextY, nextX, cur.cnt++));
+						q.add(new point(nextY, nextX));
+						cnt++;
 						isVisited[nextY][nextX] = true;
 					}
 				}
 			}
-			
-			if(q.isEmpty()) list.add(cur.cnt);
 		}
 		
+		list.add(cnt);
 	}
 
 }
