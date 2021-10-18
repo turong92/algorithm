@@ -22,7 +22,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
 		int[][] town = new int[N][];
-		boolean[][] isVisited = new boolean[N + 1][N + 1];
+		boolean[][] isVisited = new boolean[N][N];
 		
 		for(int i=0; i<N; i++) {
 			town[i] = Arrays.stream(br.readLine().split("")).mapToInt(Integer::parseInt).toArray();
@@ -37,6 +37,7 @@ public class Main {
 			}
 		}
 		
+		Collections.sort(list, (o1, o2) -> {return o1 - o2;});
 		System.out.println(list.size());
 		for(int i=0; i<list.size(); i++) {
 			System.out.println(list.get(i));
