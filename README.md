@@ -7,6 +7,17 @@ https://www.acmicpc.net/step
 
 LEVEL
 1. 입출력과 사칙연산 (완료)
+  2557 	Hello World
+  10718 We love kriii
+  10171 고양이
+  10172 개
+  1000  A+B
+  1001  A-B
+  10998 A×B
+  1008  A/B
+  10869 사칙연산
+  10430 나머지
+  2588  곱셈
 2. if문  (완료)
 3. for문 (완료)
 4. while문 (완료)
